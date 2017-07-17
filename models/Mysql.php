@@ -1,12 +1,12 @@
 <?php
-
+namespace models;
 class Mysql
 {
 	public $link;
 
-	function __construct($host,$login,$passwd,$database)
+	function __construct($host,$login,$password,$database)
 	{
-		$this->link = mysqli_connect($host,$login,$passwd,$database);
+		$this->link = mysqli_connect($host,$login,$password,$database);
 		if (!$this->link) {
 	    	echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
 	    	echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;

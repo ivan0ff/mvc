@@ -11,6 +11,8 @@ class Autoload
             $classFile = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.str_replace('\\', '/', $className) . '.php';
         }
 
+
+
         if(empty($classFile)) {
             return;
         }
@@ -18,6 +20,10 @@ class Autoload
         if (!is_file($classFile)) {
             return;
         }
+
+
+
+
 
 
 
